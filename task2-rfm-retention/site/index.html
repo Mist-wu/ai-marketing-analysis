@@ -78,7 +78,7 @@ footer{max-width:1120px;margin:0 auto;padding:24px 28px 40px;color:var(--faint);
 /* 封面客户方阵 */
 .cover{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:48px;align-items:center}
 #waffle{width:100%;aspect-ratio:1/1;display:block}
-.waffle-legend{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;font-size:12px;color:var(--muted);margin-top:12px}
+.waffle-legend{display:grid;grid-template-columns:1fr 1fr;gap:4px 28px;font-size:12px;color:var(--muted);margin-top:12px}
 .waffle-legend span{display:flex;align-items:center;gap:6px}
 .waffle-legend i{width:9px;height:9px;border-radius:2px}
 .waffle-legend b{margin-left:auto;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
@@ -147,7 +147,7 @@ body.snap section.slide{transition:none!important}
 body.present section.slide.active{opacity:1;visibility:visible;transform:none;transition:opacity .5s var(--ease),transform .6s var(--ease),visibility 0s}
 body.present footer{display:none}
 body.present svg{max-height:64vh}
-body.present #waffle{max-height:72vh;width:auto;margin-left:auto}
+body.present .waffle-box{width:min(100%,66vh);margin-left:auto}
 body.present .progress,body.present .pager{display:block}
 .progress{position:fixed;left:0;bottom:0;height:3px;background:var(--accent);transition:width .5s var(--ease);z-index:20}
 .pager{position:fixed;right:28px;bottom:18px;font-size:12px;color:var(--faint);z-index:20;letter-spacing:.05em}
@@ -190,13 +190,13 @@ body.present .hint{display:block}
       <p class="sub rv" style="--d:2">一家英国线上零售商的 RFM 客户分群与复购分析</p>
       <div class="kpis">
         <div class="kpi hl rv" style="--d:3"><b data-count="77.2" data-suffix="%">77.2%</b><span>营收来自前 20% 客户</span></div>
-        <div class="kpi rv" style="--d:4"><b data-count="52" data-suffix="%">52%</b><span>营收来自 14% 的冠军客户</span></div>
+        <div class="kpi rv" style="--d:4"><b data-count="52" data-suffix="%">52%</b><span>14% 冠军客户的贡献</span></div>
         <div class="kpi rv" style="--d:5"><b data-count="21" data-prefix="≈" data-suffix="%">≈21%</b><span>新客下月回购率</span></div>
         <div class="kpi rv" style="--d:6"><b>9–11<small style="font-size:.5em">月</small></b><span>集中回购季</span></div>
       </div>
       <p class="note rv" style="--d:7">薛熙辰 · 2026.11.03 · 数据 UCI Online Retail II · 分析与网页由 Claude Code 协助</p>
     </div>
-    <div class="rv" style="--d:2">
+    <div class="waffle-box rv" style="--d:2">
       <canvas id="waffle" aria-label="5852 位客户按分群着色"></canvas>
       <div class="waffle-legend" id="waffle-legend"></div>
     </div>
