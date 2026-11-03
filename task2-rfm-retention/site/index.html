@@ -43,7 +43,7 @@ h2 em{font-style:normal;color:var(--accent)}
 .sub{font-size:clamp(15px,1.5vw,19px);color:var(--muted);margin:0}
 .cols{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:56px;align-items:center}
 .cols.half{grid-template-columns:1fr 1fr}
-.big{font-size:clamp(72px,11vw,148px);line-height:.95;font-weight:800;letter-spacing:-.04em;color:var(--accent);font-variant-numeric:tabular-nums}
+.big{white-space:nowrap;font-size:clamp(72px,11vw,148px);line-height:.95;font-weight:800;letter-spacing:-.04em;color:var(--accent);font-variant-numeric:tabular-nums}
 .big small{font-size:.38em;letter-spacing:0;margin-left:2px}
 .cap{font-size:15px;color:var(--muted);margin-top:10px}
 .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
@@ -617,7 +617,12 @@ function countUp(root) {
   root.querySelectorAll("[data-count]").forEach(n => {
     const to = +n.dataset.count, dec = (n.dataset.count.split(".")[1] || "").length;
     const pre = n.dataset.prefix || "", suf = n.dataset.suffix || "";
-    if (reduced) { n.textContent = pre + to.toFixed(dec) + suf; return; }
+    // 先按最终数字占好宽度，滚动过程中宽度不变，后面的单位不会换行导致整页上下跳
+    n.textContent = pre + to.toFixed(dec) + suf;
+    if (reduced) return;
+    if (getComputedStyle(n).display === "inline") n.style.display = "inline-block";
+    n.style.minWidth = "";
+    n.style.minWidth = n.getBoundingClientRect().width + "px";
     const t0 = performance.now(), dur = 1200;
     const tick = now => {
       const t = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - t, 3);
