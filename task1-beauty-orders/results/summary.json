@@ -1,0 +1,164 @@
+{
+  "orders": 87801,
+  "customers": 15000,
+  "start": "2023-01-01",
+  "end": "2024-12-30",
+  "mean_amount": 278.2787165294245,
+  "median_amount": 233.54,
+  "min_amount": 44.03,
+  "max_amount": 1393.95,
+  "p95_amount": 581.78,
+  "total_amount": 24433149.59,
+  "mean_quantity": 2.9979499094543343,
+  "mean_frequency": 5.8534,
+  "median_frequency": 4.0,
+  "single_customers": 4554,
+  "single_share": 0.3036,
+  "days": 730,
+  "days_with_records": 697,
+  "no_record_days": 33,
+  "daily_mean": 120.27534246575343,
+  "daily_median": 107.0,
+  "peak_date": "2023-12-29",
+  "peak_orders": 331,
+  "iqr_high_threshold": 519.625,
+  "high_outlier_days": 0,
+  "y2023": 40910,
+  "y2024_through_dec30": 46891,
+  "source_sha256": "749ed60a60c64e2826b5d75554a2ed8f3a5897fe79e9a03c76ed69b63dd98f63",
+  "quality": {
+    "记录数": 87801,
+    "客户数": 15000,
+    "字段数": 6,
+    "缺失单元格": 0,
+    "重复订单号": 0,
+    "整行重复": 0,
+    "非正金额": 0,
+    "数量非正或非整数": 0,
+    "未识别品类": 0
+  },
+  "categories": [
+    {
+      "category": "护肤",
+      "orders": 42344,
+      "share": 0.4822724114759513,
+      "amount": 10435344.22
+    },
+    {
+      "category": "彩妆",
+      "orders": 23425,
+      "share": 0.2667965057345588,
+      "amount": 8024007.9
+    },
+    {
+      "category": "个护",
+      "orders": 12873,
+      "share": 0.14661564219086343,
+      "amount": 2776570.04
+    },
+    {
+      "category": "香水",
+      "orders": 9159,
+      "share": 0.10431544059862644,
+      "amount": 3197227.43
+    }
+  ],
+  "monthly": [
+    {
+      "month": "2023-01",
+      "orders": 607
+    },
+    {
+      "month": "2023-02",
+      "orders": 571
+    },
+    {
+      "month": "2023-03",
+      "orders": 645
+    },
+    {
+      "month": "2023-04",
+      "orders": 592
+    },
+    {
+      "month": "2023-05",
+      "orders": 585
+    },
+    {
+      "month": "2023-06",
+      "orders": 0
+    },
+    {
+      "month": "2023-07",
+      "orders": 1562
+    },
+    {
+      "month": "2023-08",
+      "orders": 4377
+    },
+    {
+      "month": "2023-09",
+      "orders": 6189
+    },
+    {
+      "month": "2023-10",
+      "orders": 8100
+    },
+    {
+      "month": "2023-11",
+      "orders": 8411
+    },
+    {
+      "month": "2023-12",
+      "orders": 9271
+    },
+    {
+      "month": "2024-01",
+      "orders": 8935
+    },
+    {
+      "month": "2024-02",
+      "orders": 7829
+    },
+    {
+      "month": "2024-03",
+      "orders": 7156
+    },
+    {
+      "month": "2024-04",
+      "orders": 5666
+    },
+    {
+      "month": "2024-05",
+      "orders": 3927
+    },
+    {
+      "month": "2024-06",
+      "orders": 1266
+    },
+    {
+      "month": "2024-07",
+      "orders": 3423
+    },
+    {
+      "month": "2024-08",
+      "orders": 3593
+    },
+    {
+      "month": "2024-09",
+      "orders": 3365
+    },
+    {
+      "month": "2024-10",
+      "orders": 599
+    },
+    {
+      "month": "2024-11",
+      "orders": 551
+    },
+    {
+      "month": "2024-12",
+      "orders": 581
+    }
+  ]
+}
