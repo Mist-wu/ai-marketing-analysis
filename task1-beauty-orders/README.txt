@@ -15,9 +15,8 @@ figures/ 内含五张 1980×1080 PNG；results/ 内含汇总 CSV 和计算结果
 1. 安装 pandas numpy openpyxl matplotlib。
 2. python analyze_orders.py /实际路径/orders.xlsx
 3. python render_figures.py
-重新运行会更新本目录 results/ 中的汇总结果，并写出 reviewed.json。
-原作业的 finalize_report.py 读取 reviewed.json，补上报告元数据后写入 report-app/src/data.json。
-离线 HTML 打开时不读 reviewed.json。网页是已核验的成果快照，重算不会改写它。
+分析脚本更新 results/，同时导出 reviewed.json，供原作业的 finalize_report.py 补全元数据后写入 report-app/src/data.json。
+本目录的离线 HTML 是已核验的独立快照，重算只更新数据和 PNG。
 PNG 中文字体优先使用 macOS 黑体；其他系统需配置可用的中文字体。
 
 已完成核验：主键重复、整行重复、缺失字段、非正金额、非法数量、未识别品类均为 0；
