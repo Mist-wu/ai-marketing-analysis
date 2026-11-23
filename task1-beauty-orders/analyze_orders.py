@@ -2,7 +2,7 @@
 依赖：pandas numpy openpyxl matplotlib。只读取原始文件，不改写数据。
 """
 from pathlib import Path
-import sys, json, hashlib, shutil
+import sys, json, hashlib
 from datetime import datetime, timezone
 from collections import Counter
 from decimal import Decimal

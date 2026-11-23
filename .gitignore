@@ -1,4 +1,6 @@
 .venv/
 __pycache__/
 .DS_Store
+.wrangler/
+task2-rfm-retention/.wrangler/
 task2-rfm-retention/data/

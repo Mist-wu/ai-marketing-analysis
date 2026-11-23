@@ -46,6 +46,44 @@
     "invoice_share": 0.1546207205191318
   },
   "no_customer_revenue": 3101456.1799999997,
+  "no_customer": {
+    "raw_missing_rows": 243007,
+    "raw_rows": 1067371,
+    "raw_share": 0.22766872999172733,
+    "removed_rows": 234437,
+    "removed_denominator": 1013932,
+    "removed_share": 0.23121570282819756,
+    "share_of_raw": 0.21963965668919241,
+    "positive_revenue": 3101456.1799999997,
+    "positive_revenue_basis": "去重并删除取消单之后，缺客户号行的数量×单价；负值按 0 计"
+  },
+  "countries": {
+    "raw_strings": 43,
+    "clean": 41
+  },
+  "duplicates": {
+    "sheets": [
+      {
+        "sheet": "Year 2009-2010",
+        "rows": 525461,
+        "unique_rows": 518596,
+        "extra_rows": 6865
+      },
+      {
+        "sheet": "Year 2010-2011",
+        "rows": 541910,
+        "unique_rows": 536642,
+        "extra_rows": 5268
+      }
+    ],
+    "shared_distinct": 22202,
+    "paired_rows": 22523,
+    "merged_rows": 1033036,
+    "removed": 34335,
+    "remaining_duplicates": 11812,
+    "overlap_start": "2010-12-01",
+    "overlap_end": "2010-12-09"
+  },
   "clean": {
     "rows": 776577,
     "customers": 5852,
@@ -59,10 +97,12 @@
     "median_monetary": 856.02,
     "mean_monetary": 2916.7067617908406,
     "uk_revenue_share": 0.837138696996383,
-    "uk_customer_share": 0.9114832535885168
+    "uk_customer_share": 0.9114832535885168,
+    "one_purchase_share": 0.27648667122351334
   },
   "pareto": {
     "top20_share": 0.771508146034585,
+    "top_n": 1170,
     "curve": [
       0.0,
       0.3941339561598851,
@@ -116,6 +156,27 @@
       0.9997033207467125,
       0.9999999999999984
     ]
+  },
+  "winback": {
+    "segments": [
+      "cant_lose",
+      "at_risk"
+    ],
+    "customers": 709,
+    "revenue": 1524847.55,
+    "revenue_share": 0.08933658363607874,
+    "recency_median": 366.0,
+    "recency_min": 187,
+    "recency_max": 724
+  },
+  "calendar_highlight": {
+    "months": [
+      9,
+      10,
+      11
+    ],
+    "label": "9–11 月",
+    "role": "图上的位置标记，用来看这两年的分布，不是因果结论"
   },
   "segments": [
     {
@@ -266,6 +327,43 @@
       564
     ]
   ],
+  "rf_segment": [
+    [
+      "hibernating",
+      "hibernating",
+      "at_risk",
+      "at_risk",
+      "cant_lose"
+    ],
+    [
+      "hibernating",
+      "hibernating",
+      "at_risk",
+      "at_risk",
+      "cant_lose"
+    ],
+    [
+      "sleepy",
+      "sleepy",
+      "attention",
+      "loyal",
+      "loyal"
+    ],
+    [
+      "promising",
+      "potential",
+      "potential",
+      "loyal",
+      "loyal"
+    ],
+    [
+      "new",
+      "potential",
+      "potential",
+      "champions",
+      "champions"
+    ]
+  ],
   "cohorts": [
     {
       "cohort": "2009-12",
@@ -296,7 +394,11 @@
         0.3039,
         0.4059,
         0.1966
-      ]
+      ],
+      "partial_offsets": [
+        24
+      ],
+      "excluded_from_average": true
     },
     {
       "cohort": "2010-01",
@@ -326,7 +428,11 @@
         0.1984,
         0.2527,
         0.0571
-      ]
+      ],
+      "partial_offsets": [
+        23
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2010-02",
@@ -355,7 +461,11 @@
         0.2293,
         0.1653,
         0.0587
-      ]
+      ],
+      "partial_offsets": [
+        22
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2010-03",
@@ -383,7 +493,11 @@
         0.2041,
         0.2132,
         0.0771
-      ]
+      ],
+      "partial_offsets": [
+        21
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2010-04",
@@ -410,7 +524,11 @@
         0.1803,
         0.2279,
         0.0578
-      ]
+      ],
+      "partial_offsets": [
+        20
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2010-05",
@@ -436,7 +554,11 @@
         0.1647,
         0.1529,
         0.0471
-      ]
+      ],
+      "partial_offsets": [
+        19
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2010-06",
@@ -461,7 +583,11 @@
         0.1311,
         0.2022,
         0.0487
-      ]
+      ],
+      "partial_offsets": [
+        18
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2010-07",
@@ -485,7 +611,11 @@
         0.173,
         0.2378,
         0.0811
-      ]
+      ],
+      "partial_offsets": [
+        17
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2010-08",
@@ -508,7 +638,11 @@
         0.1718,
         0.1963,
         0.0736
-      ]
+      ],
+      "partial_offsets": [
+        16
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2010-09",
@@ -530,7 +664,11 @@
         0.1674,
         0.1674,
         0.0544
-      ]
+      ],
+      "partial_offsets": [
+        15
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2010-10",
@@ -551,7 +689,11 @@
         0.192,
         0.232,
         0.0693
-      ]
+      ],
+      "partial_offsets": [
+        14
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2010-11",
@@ -571,7 +713,11 @@
         0.1472,
         0.2515,
         0.0644
-      ]
+      ],
+      "partial_offsets": [
+        13
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2010-12",
@@ -590,7 +736,11 @@
         0.0921,
         0.1974,
         0.0263
-      ]
+      ],
+      "partial_offsets": [
+        12
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2011-01",
@@ -608,7 +758,11 @@
         0.2083,
         0.25,
         0.1111
-      ]
+      ],
+      "partial_offsets": [
+        11
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2011-02",
@@ -625,7 +779,11 @@
         0.152,
         0.184,
         0.064
-      ]
+      ],
+      "partial_offsets": [
+        10
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2011-03",
@@ -641,7 +799,11 @@
         0.2011,
         0.2402,
         0.095
-      ]
+      ],
+      "partial_offsets": [
+        9
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2011-04",
@@ -656,7 +818,11 @@
         0.1792,
         0.2547,
         0.1132
-      ]
+      ],
+      "partial_offsets": [
+        8
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2011-05",
@@ -670,7 +836,11 @@
         0.2072,
         0.2613,
         0.1171
-      ]
+      ],
+      "partial_offsets": [
+        7
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2011-06",
@@ -683,7 +853,11 @@
         0.2037,
         0.2778,
         0.0833
-      ]
+      ],
+      "partial_offsets": [
+        6
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2011-07",
@@ -695,7 +869,11 @@
         0.2772,
         0.3465,
         0.1584
-      ]
+      ],
+      "partial_offsets": [
+        5
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2011-08",
@@ -706,7 +884,11 @@
         0.2991,
         0.2617,
         0.1682
-      ]
+      ],
+      "partial_offsets": [
+        4
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2011-09",
@@ -716,7 +898,11 @@
         0.2713,
         0.3777,
         0.1489
-      ]
+      ],
+      "partial_offsets": [
+        3
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2011-10",
@@ -725,7 +911,11 @@
         1.0,
         0.3167,
         0.1584
-      ]
+      ],
+      "partial_offsets": [
+        2
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2011-11",
@@ -733,17 +923,51 @@
       "retention": [
         1.0,
         0.1414
-      ]
+      ],
+      "partial_offsets": [
+        1
+      ],
+      "excluded_from_average": false
     },
     {
       "cohort": "2011-12",
       "size": 28,
       "retention": [
         1.0
-      ]
+      ],
+      "partial_offsets": [
+        0
+      ],
+      "excluded_from_average": false
     }
   ],
+  "retention": {
+    "average_from": "2010-01",
+    "partial_month": "2011-12",
+    "observed_through": "2011-12-09",
+    "complete": {
+      "1": 0.20974782144382742,
+      "3": 0.21085361572665573,
+      "6": 0.18448612585291888,
+      "12": 0.18429434306569342
+    },
+    "with_partial_month": {
+      "1": 0.20706888980094398,
+      "3": 0.20824270342972426,
+      "6": 0.18179778597785978,
+      "12": 0.18072491082045186
+    },
+    "weight": "average_from 及以后的批次，按批次人数加权；格子先保留四位小数",
+    "truncated_note": "平均起点之前的批次含更早的老客户，热力图淡化，不进入均值",
+    "partial_note": "末月未到该月最后一天。这些格子保留在矩阵里，完整月均值不使用它们"
+  },
   "retention_avg": {
+    "1": 0.20974782144382742,
+    "3": 0.21085361572665573,
+    "6": 0.18448612585291888,
+    "12": 0.18429434306569342
+  },
+  "retention_avg_with_partial_month": {
     "1": 0.20706888980094398,
     "3": 0.20824270342972426,
     "6": 0.18179778597785978,
@@ -926,7 +1150,7 @@
       "new": 28
     }
   ],
-  "countries": [
+  "country_revenue": [
     {
       "country": "United Kingdom",
       "revenue": 14288758.75
